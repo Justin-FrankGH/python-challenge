@@ -42,7 +42,8 @@ with open(pybank_file, 'r', newline='') as pybank_csv:
     maxIndex = changes_list.index(maxProfit) + 1
     minIndex = changes_list.index(minLoss) + 1
     dates = [r[0] for r in csv_reader]
-
+# Print
+print(f'Financial Analysis \n Total Months: {monthCount} \n Total: {profitLossTotal} \n Average Change: ${average} \n Greatest Increase in Profits: {dates[maxIndex]} ${maxProfit} \n Greatest Decrease in Profits: {dates[minIndex]} ${minLoss}')
 # Write
 text_file = open("financial_analysis.txt", "w")
 text_file.write(f'Financial Analysis \n Total Months: {monthCount} \n Total: {profitLossTotal} \n Average Change: ${average} \n Greatest Increase in Profits: {dates[maxIndex]} ${maxProfit} \n Greatest Decrease in Profits: {dates[minIndex]} ${minLoss}')
